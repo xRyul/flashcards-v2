@@ -12,6 +12,7 @@
   "name": "flashcards-v2",
   "scripts": {
     "build": "rollup --config rollup.config.js --environment BUILD:production",
+    "build:copy": "npm run build && node scripts/copy-to-testing-vault.cjs",
     "dev": "rollup --config rollup.config.js -w --environment BUILD:dev",
     "test": "jest"
   },
